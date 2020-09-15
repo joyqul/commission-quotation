@@ -6,6 +6,7 @@ import {
   coloredTypes,
   commissionTypes,
 } from "./components/config";
+import QuotationPrice from "./components/QuotationPrice";
 
 function App() {
   const [mainItem, setMainItem] = useState(onSellItems[0].value);
@@ -18,6 +19,11 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <QuotationPrice
+          mainItem={mainItem}
+          coloredType={coloredType}
+          commissionType={commissionType}
+        />
         <Selections.MainItem value={mainItem} setValue={setMainItem} />
         <Selections.ColoredType
           value={coloredType}
