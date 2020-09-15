@@ -1,23 +1,22 @@
-import React from "react";
-import logo from "./logo.svg";
+import React, { useState } from "react";
 import "./App.css";
+import Selections from "./components/Selections";
+import { onSellItems, coloredTypes } from "./components/config";
 
 function App() {
+  const [selectedItem, setSelectedItem] = useState(onSellItems[0].value);
+  const [coloredType, setColoredType] = useState(
+    coloredTypes.celluloidColored.value
+  );
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        <Selections.MainItem value={selectedItem} setValue={setSelectedItem} />
+        <Selections.ColoredType
+          value={coloredType}
+          setValue={setColoredType}
+          mainItemValue={selectedItem}
+        />
       </header>
     </div>
   );
