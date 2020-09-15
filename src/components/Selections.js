@@ -1,14 +1,16 @@
 import React from "react";
 import Select from "@material-ui/core/Select";
-import { useState } from "react";
-import { onSellItems, coloredTypes, basePrices } from "./config";
+import {
+  onSellItems,
+  coloredTypes,
+  basePrices,
+  commissionTypes,
+} from "./config";
 import {
   MenuItem,
   RadioGroup,
   FormControlLabel,
   Radio,
-  FormControl,
-  FormLabel,
 } from "@material-ui/core";
 
 const MainItem = ({ value, setValue }) => {
@@ -27,7 +29,7 @@ const MainItem = ({ value, setValue }) => {
 };
 
 const RadioLabel = ({ text }) => <span style={{ color: "#000" }}>{text}</span>;
-const ColoredType = ({ mainItemValue, value, setValue }) => {
+const ColoredType = ({ mainItem, value, setValue }) => {
   const onChange = (event) => {
     setValue(parseInt(event.target.value));
   };
@@ -37,7 +39,7 @@ const ColoredType = ({ mainItemValue, value, setValue }) => {
     <RadioGroup value={value} onChange={onChange} row>
       {coloredTypeKeys.map((key) => {
         const item = coloredTypes[key];
-        const basePrice = basePrices[mainItemValue][item.value];
+        const basePrice = basePrices[mainItem][item.value];
         if (!basePrice) return null;
         return (
           <FormControlLabel
@@ -51,4 +53,27 @@ const ColoredType = ({ mainItemValue, value, setValue }) => {
     </RadioGroup>
   );
 };
-export default { ColoredType, MainItem };
+
+const CommissionType = ({ value, setValue }) => {
+  const onChange = (event) => {
+    setValue(parseInt(event.target.value));
+  };
+
+  const commissionTypeKeys = Object.keys(commissionTypes);
+  return (
+    <RadioGroup value={value} onChange={onChange} row>
+      {commissionTypeKeys.map((key) => {
+        const item = commissionTypes[key];
+        return (
+          <FormControlLabel
+            key={item.value}
+            value={item.value}
+            control={<Radio />}
+            label={<RadioLabel text={item.label} />}
+          />
+        );
+      })}
+    </RadioGroup>
+  );
+};
+export default { CommissionType, ColoredType, MainItem };
