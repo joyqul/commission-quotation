@@ -7,6 +7,7 @@ import {
   commissionTypes,
 } from "./components/config";
 import QuotationPrice from "./components/QuotationPrice";
+import SampleImages from "./components/SampleImages";
 
 function App() {
   const [mainItem, setMainItem] = useState(onSellItems[0].value);
@@ -34,6 +35,7 @@ function App() {
           value={commissionType}
           setValue={setCommissionType}
         />
+        <SampleImages mainItem={mainItem} coloredType={coloredType} />
       </header>
     </div>
   );

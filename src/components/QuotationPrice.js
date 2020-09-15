@@ -17,9 +17,7 @@ const QuotationPrice = ({ mainItem, coloredType, commissionType }) => {
     setPrice(getPrice());
   };
 
-  useEffect(() => {
-    updateCurrentPrice();
-  });
+  useEffect(updateCurrentPrice, [mainItem, coloredType, commissionType]);
 
   return (
     <TextField

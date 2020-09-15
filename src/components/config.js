@@ -79,6 +79,80 @@ const basePrices = {
   },
 };
 
+const sampleImages = {
+  [itemTypes.chibiSingle.value]: {
+    [coloredTypes.celluloidColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-goose5970_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-8473_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-shabu6747_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0128-q-sophie496_orig.jpg",
+    ],
+    [coloredTypes.meticulousColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0129-q-clam3963_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0202-q-e3s-watermark_orig.jpg",
+    ],
+  },
+  [itemTypes.chibiCouple.value]: {
+    [coloredTypes.celluloidColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-q-garnit_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0725-q-yuu_orig.jpg",
+    ],
+    [coloredTypes.meticulousColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0314-q_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0315-q-sumi-sample_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0316-q-taurus5627-sample_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-kumakura-sample_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-haruna19_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0325-q-hippo237_orig.jpg",
+    ],
+  },
+  [itemTypes.aboveWaistSingle.value]: {
+    [coloredTypes.monoColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw03_1_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw05_1_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw06_1_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0104-leaflove508_orig.jpg",
+    ],
+    [coloredTypes.celluloidColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/sugar4174_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0118-kurodoyami-single-color_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0122-nnne5b-eillote-color_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0119-salmon395-color_orig.jpg",
+    ],
+    [coloredTypes.meticulousColored.value]: [
+      "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/bookwalker_orig.jpg",
+      "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/2146595286_orig.jpg",
+    ],
+  },
+  [itemTypes.aboveWaistCouple.value]: {
+    [coloredTypes.monoColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0829-shinatake_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw2-01_1_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-b-w_orig.jpg",
+    ],
+    [coloredTypes.celluloidColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-color_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0105-hotdog5580-color_orig.jpg",
+    ],
+    [coloredTypes.meticulousColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0808-shine-1225_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0204-e3s-optionb-sample_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0203-e3s-watermarker_orig.jpg",
+    ],
+  },
+  [itemTypes.tachie.value]: {
+    [coloredTypes.celluloidColored.value]: [],
+    [coloredTypes.meticulousColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-takemoto-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0308-sample-square_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0311-seven-sample-forig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-fairy-1-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0402-finch5340-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0412-rimi-ig_orig.jpg",
+    ],
+  },
+};
+
 const onSellItems = [
   itemTypes.chibiSingle,
   itemTypes.chibiCouple,
@@ -86,4 +160,4 @@ const onSellItems = [
   itemTypes.aboveWaistCouple,
   itemTypes.tachie,
 ];
-export { onSellItems, basePrices, commissionTypes, coloredTypes };
+export { onSellItems, sampleImages, basePrices, commissionTypes, coloredTypes };
