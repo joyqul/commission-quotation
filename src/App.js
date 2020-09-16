@@ -35,6 +35,7 @@ function App() {
           value={commissionType}
           setValue={setCommissionType}
         />
+        <Selections.AdditionalCheckboxField mainItem={mainItem} />
       </header>
       <div>
         <SampleImages mainItem={mainItem} coloredType={coloredType} />

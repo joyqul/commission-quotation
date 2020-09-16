@@ -153,6 +153,32 @@ const sampleImages = {
   },
 };
 
+const additionalFields = {
+  [itemTypes.tachie.value]: [
+    { key: "back", value: "back", label: "背面", price: 100 },
+    { key: "breakDown", value: "breakDown", label: "拆分圖", price: 300 },
+    {
+      key: "clothesDesign",
+      value: "normal",
+      label: "服裝設計-日常服",
+      price: 100,
+    },
+    {
+      key: "clothesDesign",
+      value: "gatcha",
+      label: "服裝設計-驚喜包",
+      price: 200,
+    },
+    {
+      key: "clothesDesign",
+      value: "chosen",
+      label: "服裝設計指定風格",
+      minPrice: 300,
+      maxPrice: 600,
+    },
+  ],
+};
+
 const onSellItems = [
   itemTypes.chibiSingle,
   itemTypes.chibiCouple,
@@ -160,4 +186,11 @@ const onSellItems = [
   itemTypes.aboveWaistCouple,
   itemTypes.tachie,
 ];
-export { onSellItems, sampleImages, basePrices, commissionTypes, coloredTypes };
+export {
+  additionalFields,
+  onSellItems,
+  sampleImages,
+  basePrices,
+  commissionTypes,
+  coloredTypes,
+};

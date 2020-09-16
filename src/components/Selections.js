@@ -1,16 +1,18 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Select from "@material-ui/core/Select";
 import {
   onSellItems,
   coloredTypes,
   basePrices,
   commissionTypes,
+  additionalFields,
 } from "./config";
 import {
   MenuItem,
   RadioGroup,
   FormControlLabel,
   Radio,
+  Checkbox,
 } from "@material-ui/core";
 
 const MainItem = ({ value, setValue }) => {
@@ -76,4 +78,52 @@ const CommissionType = ({ value, setValue }) => {
     </RadioGroup>
   );
 };
-export default { CommissionType, ColoredType, MainItem };
+
+const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
+  const [state, setState] = useState({});
+  const additionalField = additionalFields[mainItem];
+
+  const resetState = () => {
+    if (!additionalField) {
+      setState({});
+      return;
+    }
+    const keys = additionalField.map((f) => f.key);
+    const newState = {};
+    for (const key of keys) {
+      newState[key] = null;
+    }
+    setState(newState);
+  };
+  const recalculatePrice = () => {};
+
+  const onChange = (value, event) => {
+    setState({
+      ...state,
+      [event.target.name]: event.target.checked ? value : null,
+    });
+  };
+
+  useEffect(resetState, [mainItem]);
+  if (!additionalField) return null;
+  return (
+    <div row={"true"}>
+      {additionalField.map((f) => (
+        <FormControlLabel
+          key={f.value}
+          name={f.key}
+          control={<Checkbox checked={state[f.key] === f.value} />}
+          label={<RadioLabel text={f.label} />}
+          onChange={(e) => onChange(f.value, e)}
+        />
+      ))}
+    </div>
+  );
+};
+
+export default {
+  AdditionalCheckboxField,
+  CommissionType,
+  ColoredType,
+  MainItem,
+};
