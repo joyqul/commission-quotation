@@ -15,17 +15,12 @@ const SampleImages = ({ mainItem, coloredType }) => {
 
   useEffect(updateDisplayImages, [mainItem, coloredType]);
 
-  const onClickItem = (index) => {
-    const link = displayImages[index];
-    window.open(link, "_blank");
-  };
-
   if (displayImages.length === 0) {
     return <p>暫無範例</p>;
   }
   return (
     <div>
-      <Carousel ref={ref} onClickItem={onClickItem} infiniteLoop centerMode>
+      <Carousel ref={ref} infiniteLoop centerMode>
         {displayImages.map((uri) => (
           <img key={uri} src={uri} style={{ maxWidth: 500 }} />
         ))}
