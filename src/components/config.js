@@ -155,7 +155,7 @@ const sampleImages = {
 
 const additionalFields = {
   [itemTypes.tachie.value]: [
-    { key: "back", value: "back", label: "背面", price: 100 },
+    { key: "back", value: "back", label: "背面", price: 200 },
     { key: "breakDown", value: "breakDown", label: "拆分圖", price: 300 },
     {
       key: "clothesDesign",
