@@ -22,7 +22,7 @@ const SampleImages = ({ mainItem, coloredType }) => {
     <div>
       <Carousel onClickItem={onClickItem}>
         {displayImages.map((uri) => (
-          <img src={uri} style={{ maxWidth: 500 }} />
+          <img key={uri} src={uri} style={{ maxWidth: 500 }} />
         ))}
       </Carousel>
     </div>

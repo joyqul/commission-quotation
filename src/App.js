@@ -35,8 +35,10 @@ function App() {
           value={commissionType}
           setValue={setCommissionType}
         />
-        <SampleImages mainItem={mainItem} coloredType={coloredType} />
       </header>
+      <div>
+        <SampleImages mainItem={mainItem} coloredType={coloredType} />
+      </div>
     </div>
   );
 }
