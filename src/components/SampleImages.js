@@ -6,8 +6,10 @@ import { sampleImages } from "./config";
 const SampleImages = ({ mainItem, coloredType }) => {
   const defaultImages = [];
   const [displayImages, setDisplayImages] = useState(defaultImages);
+  const ref = React.createRef();
 
   const updateDisplayImages = () => {
+    ref.current && ref.current.moveTo(0);
     setDisplayImages(sampleImages[mainItem][coloredType] || defaultImages);
   };
 
@@ -23,7 +25,7 @@ const SampleImages = ({ mainItem, coloredType }) => {
   }
   return (
     <div>
-      <Carousel onClickItem={onClickItem} infiniteLoop centerMode>
+      <Carousel ref={ref} onClickItem={onClickItem} infiniteLoop centerMode>
         {displayImages.map((uri) => (
           <img key={uri} src={uri} style={{ maxWidth: 500 }} />
         ))}
