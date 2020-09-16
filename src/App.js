@@ -8,6 +8,7 @@ import {
 } from "./components/config";
 import QuotationPrice from "./components/QuotationPrice";
 import SampleImages from "./components/SampleImages";
+import ActionButtons from "./components/ActionButtons";
 
 function App() {
   const [mainItem, setMainItem] = useState(onSellItems[0].value);
@@ -27,6 +28,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
+        <ActionButtons />
         <QuotationPrice
           mainItem={mainItem}
           coloredType={coloredType}
