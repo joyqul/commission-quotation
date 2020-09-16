@@ -17,6 +17,13 @@ function App() {
   const [commissionType, setCommissionType] = useState(
     commissionTypes.gatcha.value
   );
+  const [additionalPriceMin, setAdditionalPriceMin] = useState(0);
+  const [additionalPriceMax, setAdditionalPriceMax] = useState(0);
+  const setPrice = ({ min, max }) => {
+    setAdditionalPriceMin(min);
+    setAdditionalPriceMax(max);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
@@ -24,6 +31,8 @@ function App() {
           mainItem={mainItem}
           coloredType={coloredType}
           commissionType={commissionType}
+          additionalPriceMin={additionalPriceMin}
+          additionalPriceMax={additionalPriceMax}
         />
         <Selections.MainItem value={mainItem} setValue={setMainItem} />
         <Selections.ColoredType
@@ -35,7 +44,10 @@ function App() {
           value={commissionType}
           setValue={setCommissionType}
         />
-        <Selections.AdditionalCheckboxField mainItem={mainItem} />
+        <Selections.AdditionalCheckboxField
+          mainItem={mainItem}
+          setPrice={setPrice}
+        />
       </header>
       <div>
         <SampleImages mainItem={mainItem} coloredType={coloredType} />

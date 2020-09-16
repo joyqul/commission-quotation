@@ -94,14 +94,29 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
       newState[key] = null;
     }
     setState(newState);
+    recalculatePrice();
   };
-  const recalculatePrice = () => {};
+
+  const recalculatePrice = (currentState = state) => {
+    if (!additionalField) setPrice({ min: 0, max: 0 });
+    let min = 0,
+      max = 0;
+    for (const field of additionalField) {
+      if (currentState[field.key] === field.value) {
+        min += (field.price || 0) + (field.minPrice || 0);
+        max += (field.price || 0) + (field.maxPrice || 0);
+      }
+    }
+    setPrice({ min, max });
+  };
 
   const onChange = (value, event) => {
-    setState({
+    const newState = {
       ...state,
       [event.target.name]: event.target.checked ? value : null,
-    });
+    };
+    setState(newState);
+    recalculatePrice(newState);
   };
 
   useEffect(resetState, [mainItem]);
