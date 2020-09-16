@@ -18,9 +18,12 @@ const SampleImages = ({ mainItem, coloredType }) => {
     window.open(link, "_blank");
   };
 
+  if (displayImages.length === 0) {
+    return <p>暫無範例</p>;
+  }
   return (
     <div>
-      <Carousel onClickItem={onClickItem}>
+      <Carousel onClickItem={onClickItem} infiniteLoop centerMode>
         {displayImages.map((uri) => (
           <img key={uri} src={uri} style={{ maxWidth: 500 }} />
         ))}
