@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f9c975f31f863aba5dafa183c298fdb2",
+    "revision": "2c9b80b43d81469e32b5441585fb51f7",
     "url": "/commission-quotation/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/commission-quotation/static/css/2.1c164e0d.chunk.css"
   },
   {
-    "revision": "9283967682f33a00480b",
+    "revision": "52550c8e2e406d1c26a0",
     "url": "/commission-quotation/static/css/main.c7e2b943.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/commission-quotation/static/js/2.c9e823a0.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "9283967682f33a00480b",
-    "url": "/commission-quotation/static/js/main.8871f885.chunk.js"
+    "revision": "52550c8e2e406d1c26a0",
+    "url": "/commission-quotation/static/js/main.aa76b975.chunk.js"
   },
   {
     "revision": "4e10c869257c49836e5a",
