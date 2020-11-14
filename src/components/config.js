@@ -80,9 +80,9 @@ const basePrices = {
 };
 
 const sampleImageTypes = {
-  original: {value: 'original', label: '原創'},
-  derivativeWork: {value: 'derivativeWork', label: '二創'},
-  dream: {value: 'dream', label: '夢向'},
+  original: { value: 'original', label: '原創' },
+  derivativeWork: { value: 'derivativeWork', label: '二創' },
+  dream: { value: 'dream', label: '夢向' },
 }
 
 const sampleImages = {
@@ -381,16 +381,17 @@ const sampleImages = {
 };
 
 const chibiAdditionalFields = [{
-    key: "smallObject1",
-    value: "smallObject1",
-    label: '小物件',
-    price: 50,
-  },
-  { key: "background",
-    value: "background",
-    label: '背景',
-    price: 50,
-  }
+  key: "smallObject1",
+  value: "smallObject1",
+  label: '小物件',
+  price: 50,
+},
+{
+  key: "background",
+  value: "background",
+  label: '背景',
+  price: 50,
+}
 ]
 
 const additionalFields = {
@@ -415,7 +416,7 @@ const additionalFields = {
       key: "clothesDesign",
       value: "normal",
       label: "服裝設計-日常服",
-      price: 100,
+      price: 200,
     },
     {
       key: "clothesDesign",
@@ -455,7 +456,7 @@ const additionalFields = {
       key: "clothesDesign2",
       value: "normal2",
       label: "【第二套】服裝設計-日常服",
-      price: 300,
+      price: 400,
       enabledOnlyIfKeySet: "clothesDesign",
     },
     {
