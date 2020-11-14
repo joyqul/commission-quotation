@@ -141,7 +141,9 @@ const sampleImages = {
     ],
   },
   [itemTypes.tachie.value]: {
-    [coloredTypes.celluloidColored.value]: [],
+    [coloredTypes.celluloidColored.value]: [
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/1001-sample_orig.jpg",
+    ],
     [coloredTypes.meticulousColored.value]: [
       "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-takemoto-ig_orig.jpg",
       "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0308-sample-square_orig.jpg",
@@ -149,6 +151,10 @@ const sampleImages = {
       "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-fairy-1-ig_orig.jpg",
       "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0402-finch5340-ig_orig.jpg",
       "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0412-rimi-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-1-sample_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-2-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0910-ig_orig.jpg",
+      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0911-ig_orig.jpg",
     ],
   },
 };
