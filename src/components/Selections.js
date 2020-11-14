@@ -30,7 +30,9 @@ const MainItem = ({ value, setValue }) => {
   );
 };
 
-const RadioLabel = ({ text }) => <span style={{ color: "#000" }}>{text}</span>;
+const RadioLabel = ({ text, style }) => (
+  <span style={{ color: "#000", ...style }}>{text}</span>
+);
 const ColoredType = ({ mainItem, value, setValue }) => {
   const onChange = (event) => {
     setValue(parseInt(event.target.value));
@@ -115,6 +117,13 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
       ...state,
       [event.target.name]: event.target.checked ? value : null,
     };
+    if (!event.target.checked) {
+      for (const f of additionalField) {
+        if (f.enabledOnlyIfKeySet === event.target.name) {
+          newState[f.key] = null;
+        }
+      }
+    }
     setState(newState);
     recalculatePrice(newState);
   };
@@ -123,15 +132,20 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
   if (!additionalField) return null;
   return (
     <div row={"true"}>
-      {additionalField.map((f) => (
-        <FormControlLabel
-          key={f.value}
-          name={f.key}
-          control={<Checkbox checked={state[f.key] === f.value} />}
-          label={<RadioLabel text={f.label} />}
-          onChange={(e) => onChange(f.value, e)}
-        />
-      ))}
+      {additionalField.map((f) => {
+        const disabled = f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
+        const labelStyle = disabled ? { color: "#aaa" } : {};
+        return (
+          <FormControlLabel
+            key={f.value}
+            name={f.key}
+            disabled={disabled}
+            control={<Checkbox checked={state[f.key] === f.value} />}
+            label={<RadioLabel text={f.label} style={labelStyle} />}
+            onChange={(e) => onChange(f.value, e)}
+          />
+        );
+      })}
     </div>
   );
 };
