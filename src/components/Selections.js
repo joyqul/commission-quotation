@@ -13,6 +13,10 @@ import {
   FormControlLabel,
   Radio,
   Checkbox,
+  Card,
+  Collapse,
+  CardActions,
+  IconButton,
 } from "@material-ui/core";
 
 const MainItem = ({ value, setValue }) => {
@@ -83,6 +87,7 @@ const CommissionType = ({ value, setValue }) => {
 
 const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
   const [state, setState] = useState({});
+  const [expanded, setExpanded] = useState(true);
   const additionalField = additionalFields[mainItem];
   const itemNumberPerRow = 6;
 
@@ -129,28 +134,43 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
     recalculatePrice(newState);
   };
 
+  const handleExpandClick = ()=>{
+    setExpanded(!expanded)
+  }
+
   useEffect(resetState, [mainItem]);
   if (!additionalField) return null;
   return (
-    <div row={"true"}>
-      {additionalField.map((f, index) => {
-        const disabled = f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
-        const labelStyle = disabled ? { color: "#aaa" } : {};
-        return (
-          <React.Fragment key={f.label}>
-            {index % itemNumberPerRow === 0 && <hr />}
-            <FormControlLabel
-              key={f.label}
-              name={f.key}
-              disabled={disabled}
-              control={<Checkbox checked={state[f.key] === f.value} />}
-              label={<RadioLabel text={f.label} style={labelStyle} />}
-              onChange={(e) => onChange(f.value, e)}
-            />
-          </React.Fragment>
-        );
-      })}
-    </div>
+    <Card>
+      <CardActions disableSpacing>
+        <IconButton
+          style={{width: '100%', fontSize:14, height: 24}}
+          onClick={handleExpandClick}
+        >{expanded? '收起': '更多選項'}</IconButton>
+      </CardActions>
+      <Collapse in={expanded} timeout="auto" unmountOnExit>
+        <div row={"true"}>
+          {additionalField.map((f, index) => {
+            const disabled =
+              f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
+            const labelStyle = disabled ? { color: "#aaa" } : {};
+            return (
+              <React.Fragment key={f.label}>
+                {index % itemNumberPerRow === 0 && <hr />}
+                <FormControlLabel
+                  key={f.label}
+                  name={f.key}
+                  disabled={disabled}
+                  control={<Checkbox checked={state[f.key] === f.value} />}
+                  label={<RadioLabel text={f.label} style={labelStyle} />}
+                  onChange={(e) => onChange(f.value, e)}
+                />
+              </React.Fragment>
+            );
+          })}
+        </div>
+      </Collapse>
+    </Card>
   );
 };
 
