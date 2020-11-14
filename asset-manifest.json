@@ -1,25 +1,22 @@
 {
   "files": {
-    "main.css": "/commission-quotation/static/css/main.c7e2b943.chunk.css",
-    "main.js": "/commission-quotation/static/js/main.aa76b975.chunk.js",
-    "main.js.map": "/commission-quotation/static/js/main.aa76b975.chunk.js.map",
+    "main.css": "/commission-quotation/static/css/main.8b855e64.chunk.css",
+    "main.js": "/commission-quotation/static/js/main.892fbdb4.chunk.js",
+    "main.js.map": "/commission-quotation/static/js/main.892fbdb4.chunk.js.map",
     "runtime-main.js": "/commission-quotation/static/js/runtime-main.6d2e66e5.js",
     "runtime-main.js.map": "/commission-quotation/static/js/runtime-main.6d2e66e5.js.map",
-    "static/css/2.1c164e0d.chunk.css": "/commission-quotation/static/css/2.1c164e0d.chunk.css",
-    "static/js/2.c9e823a0.chunk.js": "/commission-quotation/static/js/2.c9e823a0.chunk.js",
-    "static/js/2.c9e823a0.chunk.js.map": "/commission-quotation/static/js/2.c9e823a0.chunk.js.map",
+    "static/js/2.76f4fa88.chunk.js": "/commission-quotation/static/js/2.76f4fa88.chunk.js",
+    "static/js/2.76f4fa88.chunk.js.map": "/commission-quotation/static/js/2.76f4fa88.chunk.js.map",
     "index.html": "/commission-quotation/index.html",
-    "precache-manifest.ea311396445e58b7b8db79597b963dd2.js": "/commission-quotation/precache-manifest.ea311396445e58b7b8db79597b963dd2.js",
+    "precache-manifest.b597903de0bd36061ef8b84a655a9d22.js": "/commission-quotation/precache-manifest.b597903de0bd36061ef8b84a655a9d22.js",
     "service-worker.js": "/commission-quotation/service-worker.js",
-    "static/css/2.1c164e0d.chunk.css.map": "/commission-quotation/static/css/2.1c164e0d.chunk.css.map",
-    "static/css/main.c7e2b943.chunk.css.map": "/commission-quotation/static/css/main.c7e2b943.chunk.css.map",
-    "static/js/2.c9e823a0.chunk.js.LICENSE.txt": "/commission-quotation/static/js/2.c9e823a0.chunk.js.LICENSE.txt"
+    "static/css/main.8b855e64.chunk.css.map": "/commission-quotation/static/css/main.8b855e64.chunk.css.map",
+    "static/js/2.76f4fa88.chunk.js.LICENSE.txt": "/commission-quotation/static/js/2.76f4fa88.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.6d2e66e5.js",
-    "static/css/2.1c164e0d.chunk.css",
-    "static/js/2.c9e823a0.chunk.js",
-    "static/css/main.c7e2b943.chunk.css",
-    "static/js/main.aa76b975.chunk.js"
+    "static/js/2.76f4fa88.chunk.js",
+    "static/css/main.8b855e64.chunk.css",
+    "static/js/main.892fbdb4.chunk.js"
   ]
 }
