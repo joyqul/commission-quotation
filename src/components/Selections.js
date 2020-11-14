@@ -34,7 +34,7 @@ const MainItem = ({ value, setValue }) => {
   );
 };
 
-const RadioLabel = ({ text, style }) => (
+export const RadioLabel = ({ text, style }) => (
   <span style={{ color: "#000", ...style }}>{text}</span>
 );
 const ColoredType = ({ mainItem, value, setValue }) => {
