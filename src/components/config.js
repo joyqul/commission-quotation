@@ -41,15 +41,15 @@ const basePrices = {
   },
   [itemTypes.aboveWaistSingle.value]: {
     [coloredTypes.monoColored.value]: {
-      [commissionTypes.gatcha.value]: 200,
+      [commissionTypes.gatcha.value]: 300,
       [commissionTypes.commission.value]: 400,
     },
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 250,
+      [commissionTypes.gatcha.value]: 350,
       [commissionTypes.commission.value]: 450,
     },
     [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 350,
+      [commissionTypes.gatcha.value]: 450,
       [commissionTypes.commission.value]: 550,
     },
   },
@@ -331,7 +331,22 @@ const sampleImages = {
   },
 };
 
+const chibiAdditionalFields = [{
+    key: "smallObject1",
+    value: "smallObject1",
+    label: '小物件',
+    price: 50,
+  },
+  { key: "background",
+    value: "background",
+    label: '背景',
+    price: 50,
+  }
+]
+
 const additionalFields = {
+  [itemTypes.chibiSingle.value]: chibiAdditionalFields,
+  [itemTypes.chibiCouple.value]: chibiAdditionalFields,
   [itemTypes.tachie.value]: [
     {
       key: "2p",

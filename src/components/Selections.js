@@ -141,7 +141,7 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
   useEffect(resetState, [mainItem]);
   if (!additionalField) return null;
   return (
-    <Card>
+    <Card style={{width:'100%'}}>
       <CardActions disableSpacing>
         <IconButton
           style={{width: '100%', fontSize:14, height: 24}}
