@@ -161,6 +161,7 @@ const sampleImages = {
 
 const additionalFields = {
   [itemTypes.tachie.value]: [
+    { key: "2p", value: "2p", label: "差分圖", price: 100 },
     { key: "back", value: "back", label: "背面", price: 200 },
     { key: "breakDown", value: "breakDown", label: "拆分圖", price: 300 },
     {
@@ -181,6 +182,33 @@ const additionalFields = {
       label: "服裝設計指定風格",
       minPrice: 300,
       maxPrice: 600,
+    },
+    { key: "2p2", value: "2p", label: "【第二套】差分圖", price: 100 },
+    { key: "back2", value: "back", label: "【第二套】背面", price: 200 },
+    {
+      key: "breakDown2",
+      value: "breakDown",
+      label: "【第二套】拆分圖",
+      price: 300,
+    },
+    {
+      key: "clothesDesign2",
+      value: "normal",
+      label: "【第二套】服裝設計-日常服",
+      price: 300,
+    },
+    {
+      key: "clothesDesign2",
+      value: "gatcha",
+      label: "【第二套】服裝設計-驚喜包",
+      price: 400,
+    },
+    {
+      key: "clothesDesign2",
+      value: "chosen",
+      label: "【第二套】服裝設計指定風格",
+      minPrice: 500,
+      maxPrice: 800,
     },
   ],
 };
