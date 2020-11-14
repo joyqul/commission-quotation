@@ -84,6 +84,7 @@ const CommissionType = ({ value, setValue }) => {
 const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
   const [state, setState] = useState({});
   const additionalField = additionalFields[mainItem];
+  const itemNumberPerRow = 6;
 
   const resetState = () => {
     if (!additionalField) {
@@ -132,18 +133,21 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
   if (!additionalField) return null;
   return (
     <div row={"true"}>
-      {additionalField.map((f) => {
+      {additionalField.map((f, index) => {
         const disabled = f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
         const labelStyle = disabled ? { color: "#aaa" } : {};
         return (
-          <FormControlLabel
-            key={f.value}
-            name={f.key}
-            disabled={disabled}
-            control={<Checkbox checked={state[f.key] === f.value} />}
-            label={<RadioLabel text={f.label} style={labelStyle} />}
-            onChange={(e) => onChange(f.value, e)}
-          />
+          <React.Fragment key={f.label}>
+            {index % itemNumberPerRow === 0 && <hr />}
+            <FormControlLabel
+              key={f.label}
+              name={f.key}
+              disabled={disabled}
+              control={<Checkbox checked={state[f.key] === f.value} />}
+              label={<RadioLabel text={f.label} style={labelStyle} />}
+              onChange={(e) => onChange(f.value, e)}
+            />
+          </React.Fragment>
         );
       })}
     </div>
