@@ -385,7 +385,7 @@ const additionalFields = {
       value: "breakDown2",
       label: "【第二套】拆分圖",
       price: 300,
-      enabledOnlyIfKeySet: "clothesDesign",
+      enabledOnlyIfKeySet: "clothesDesign2",
     },
     {
       key: "clothesDesign2",
