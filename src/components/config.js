@@ -82,79 +82,251 @@ const basePrices = {
 const sampleImages = {
   [itemTypes.chibiSingle.value]: {
     [coloredTypes.celluloidColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-goose5970_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-8473_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-shabu6747_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0128-q-sophie496_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-goose5970_orig.jpg",
+        caption: "噗幣轉蛋圖 - 一人+小動物模板",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-8473_orig.jpg",
+        caption: "噗幣轉蛋圖 - 一人+小動物模板",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0127-q-shabu6747_orig.jpg",
+        caption: "噗幣轉蛋圖 - 一人+小動物模板",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0128-q-sophie496_orig.jpg",
+        caption: "噗幣轉蛋圖 - 一人+小動物模板",
+      },
     ],
     [coloredTypes.meticulousColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0129-q-clam3963_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0202-q-e3s-watermark_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0129-q-clam3963_orig.jpg",
+        caption: "噗幣轉蛋圖 - 一人+蛋糕模板",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0202-q-e3s-watermark_orig.jpg",
+        caption: "委託圖 - 一人+蛋糕模板",
+      },
     ],
   },
   [itemTypes.chibiCouple.value]: {
     [coloredTypes.celluloidColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-q-garnit_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0725-q-yuu_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-q-garnit_orig.jpg",
+        caption: "委託圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0725-q-yuu_orig.jpg",
+        caption: "委託圖",
+      },
     ],
     [coloredTypes.meticulousColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0314-q_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0315-q-sumi-sample_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0316-q-taurus5627-sample_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-kumakura-sample_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-haruna19_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0325-q-hippo237_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0314-q_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0315-q-sumi-sample_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0316-q-taurus5627-sample_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-kumakura-sample_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-q-haruna19_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0325-q-hippo237_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
     ],
   },
   [itemTypes.aboveWaistSingle.value]: {
     [coloredTypes.monoColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw03_1_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw05_1_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw06_1_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0104-leaflove508_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw03_1_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw05_1_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw06_1_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0104-leaflove508_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
     ],
     [coloredTypes.celluloidColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/sugar4174_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0118-kurodoyami-single-color_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0122-nnne5b-eillote-color_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0119-salmon395-color_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/sugar4174_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0118-kurodoyami-single-color_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0122-nnne5b-eillote-color_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0119-salmon395-color_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
     ],
     [coloredTypes.meticulousColored.value]: [
-      "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/bookwalker_orig.jpg",
-      "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/2146595286_orig.jpg",
+      {
+        src:
+          "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/bookwalker_orig.jpg",
+        caption: "2019 年創作圖",
+      },
+      {
+        src:
+          "https://joyqul.weebly.com/uploads/2/3/9/1/23912381/2146595286_orig.jpg",
+        caption: "2019 年創作圖",
+      },
     ],
   },
   [itemTypes.aboveWaistCouple.value]: {
     [coloredTypes.monoColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0829-shinatake_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw2-01_1_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-b-w_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0829-shinatake_orig.jpg",
+        caption: "委託圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/bw2-01_1_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-b-w_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
     ],
     [coloredTypes.celluloidColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-color_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0105-hotdog5580-color_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0106-drarry520-color_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0105-hotdog5580-color_orig.jpg",
+        caption: "噗幣轉蛋圖",
+      },
     ],
     [coloredTypes.meticulousColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0808-shine-1225_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0204-e3s-optionb-sample_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0203-e3s-watermarker_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0808-shine-1225_orig.jpg",
+        caption: "委託圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0204-e3s-optionb-sample_orig.jpg",
+        caption: "委託圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0203-e3s-watermarker_orig.jpg",
+        caption: "委託圖",
+      },
     ],
   },
   [itemTypes.tachie.value]: {
     [coloredTypes.celluloidColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/1001-sample_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/1001-sample_orig.jpg",
+        caption: "委託圖 - 服設指定風格 + 服設驚喜包",
+      },
     ],
     [coloredTypes.meticulousColored.value]: [
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-takemoto-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0308-sample-square_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0311-seven-sample-forig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-fairy-1-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0402-finch5340-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0412-rimi-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-1-sample_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-2-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0910-ig_orig.jpg",
-      "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0911-ig_orig.jpg",
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-1-sample_orig.jpg",
+        caption: "委託圖 - 服設日常服*2 + 差分圖",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0919-2-ig_orig.jpg",
+        caption: "委託圖 - 服設日常服",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0910-ig_orig.jpg",
+        caption: "委託圖 - 既有設計修改 + 背面",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0911-ig_orig.jpg",
+        caption: "委託圖 - 延伸設計 + 背面",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0822-takemoto-ig_orig.jpg",
+        caption: "委託圖 - 服設日常服 + 背面",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0308-sample-square_orig.jpg",
+        caption: "噗幣轉蛋圖 - 服設驚喜包",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0311-seven-sample-forig_orig.jpg",
+        caption: "噗幣轉蛋圖 - 服設驚喜包",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0321-fairy-1-ig_orig.jpg",
+        caption: "噗幣轉蛋圖 - 服設驚喜包",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0402-finch5340-ig_orig.jpg",
+        caption: "噗幣轉蛋圖 - 服設驚喜包",
+      },
+      {
+        src:
+          "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0412-rimi-ig_orig.jpg",
+        caption: "噗幣轉蛋圖 - 服設驚喜包",
+      },
     ],
   },
 };

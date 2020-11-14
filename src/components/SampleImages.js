@@ -1,16 +1,21 @@
 import React, { useEffect, useState } from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { Carousel } from "react-responsive-carousel";
+import Gallery from "react-grid-gallery";
 import { sampleImages } from "./config";
 
 const SampleImages = ({ mainItem, coloredType }) => {
   const defaultImages = [];
   const [displayImages, setDisplayImages] = useState(defaultImages);
-  const ref = React.createRef();
 
   const updateDisplayImages = () => {
-    ref.current && ref.current.moveTo(0);
-    setDisplayImages(sampleImages[mainItem][coloredType] || defaultImages);
+    const images = (sampleImages[mainItem][coloredType] || defaultImages).map(
+      (image) => ({
+        thumbnail: image.src,
+        thumbnailWidth: 100,
+        ...image,
+      })
+    );
+    setDisplayImages(images);
   };
 
   useEffect(updateDisplayImages, [mainItem, coloredType]);
@@ -18,14 +23,6 @@ const SampleImages = ({ mainItem, coloredType }) => {
   if (displayImages.length === 0) {
     return <p>暫無範例</p>;
   }
-  return (
-    <div>
-      <Carousel ref={ref} infiniteLoop centerMode>
-        {displayImages.map((uri) => (
-          <img key={uri} src={uri} style={{ maxWidth: 500 }} />
-        ))}
-      </Carousel>
-    </div>
-  );
+  return <Gallery images={displayImages} backdropClosesModal={true} />;
 };
 export default SampleImages;
