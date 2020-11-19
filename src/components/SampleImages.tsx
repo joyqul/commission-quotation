@@ -1,12 +1,12 @@
 import { Checkbox, FormControlLabel } from "@material-ui/core";
 import React, { useEffect, useState } from "react";
-import Gallery from "react-grid-gallery";
+import Gallery, { ImageOptionsProps } from "react-grid-gallery";
 import { sampleImages, sampleImageTypes } from "./config";
 import { RadioLabel } from './Selections'
 
 const allImageTypesKey = Object.keys(sampleImageTypes);
 
-const ConstraintCheckboxes = ({ onChange, checkedKeys }) => {
+const ConstraintCheckboxes = ({ onChange, checkedKeys }: { onChange: Function, checkedKeys: string[] }) => {
   return (
     <>
       {allImageTypesKey.map((key) => {
@@ -27,8 +27,8 @@ const ConstraintCheckboxes = ({ onChange, checkedKeys }) => {
   );
 }
 
-const SampleImages = ({ mainItem, coloredType }) => {
-  const defaultImages = [];
+const SampleImages = ({ mainItem, coloredType }: { mainItem: number, coloredType: number }) => {
+  const defaultImages: ImageOptionsProps[] = [];
   const [displayImages, setDisplayImages] = useState(defaultImages);
   const defaultDisplayKeys = allImageTypesKey;
   const [state, setState] = useState(defaultDisplayKeys);
@@ -37,14 +37,13 @@ const SampleImages = ({ mainItem, coloredType }) => {
     const images = (sampleImages[mainItem][coloredType] || defaultImages).filter(image => currentState.includes(image.type)).map(
       (image) => ({
         thumbnail: image.src,
-        thumbnailWidth: 100,
         ...image,
       })
     );
     setDisplayImages(images);
   };
 
-  const changeDisplayKeys = (value, event) => {
+  const changeDisplayKeys = (value: string, event: React.ChangeEvent<any>) => {
     const { checked } = event.target;
     const newState = state.filter(s => s !== value || checked)
     if (checked) {
@@ -59,7 +58,7 @@ const SampleImages = ({ mainItem, coloredType }) => {
     <>
       <ConstraintCheckboxes checkedKeys={state} onChange={changeDisplayKeys} />
       {displayImages.length === 0 && (<p>暫無範例</p>)}
-      {displayImages.length > 0 && <Gallery images={displayImages} backdropClosesModal={true} />}
+      {displayImages.length > 0 && <Gallery images={displayImages} backdropClosesModal={true} rowHeight={300} />}
     </>
   );
 };
