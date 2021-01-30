@@ -21,22 +21,22 @@ const itemTypes = {
 const basePrices = {
   [itemTypes.chibiSingle.value]: {
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 150,
-      [commissionTypes.commission.value]: 250,
+      [commissionTypes.gatcha.value]: 250,
+      [commissionTypes.commission.value]: 300,
     },
     [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 250,
+      [commissionTypes.gatcha.value]: 300,
       [commissionTypes.commission.value]: 350,
     },
   },
   [itemTypes.chibiCouple.value]: {
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 300,
-      [commissionTypes.commission.value]: 400,
+      [commissionTypes.gatcha.value]: 500,
+      [commissionTypes.commission.value]: 550,
     },
     [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 500,
-      [commissionTypes.commission.value]: 600,
+      [commissionTypes.gatcha.value]: 600,
+      [commissionTypes.commission.value]: 650,
     },
   },
   [itemTypes.aboveWaistSingle.value]: {
