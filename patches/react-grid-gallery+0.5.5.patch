@@ -1,0 +1,67 @@
+diff --git a/node_modules/react-grid-gallery/index.d.ts b/node_modules/react-grid-gallery/index.d.ts
+new file mode 100644
+index 0000000..7961973
+--- /dev/null
++++ b/index.d.ts
+@@ -0,0 +1,60 @@
++import * as React from "react";
++
++declare class Gallery extends React.Component<Props> { }
++
++export interface ImageOptionsProps {
++  src: string;
++  thumbnail: string;
++  thumbnailWidth?: number;
++  thumbnailHeight?: number;
++  caption?: string;
++  nano?: string;
++  alt?: string;
++  tags?: { value: string | HTMLElement, title: string, name?: string, key?: string }[],
++  isSelected?: boolean;
++  caption?: string | HTMLElement;
++  srcSet?: Array;
++  customOverlay?: HTMLElement;
++  thumbnailCaption?: string | HTMLElement;
++  orientation?: number;
++};
++
++interface Props extends LightBoxProps {
++  images: ImageOptionsProps[];
++  id?: string;
++  enableImageSelection?: boolean;
++  onSelectImage?: () => void;
++  rowHeight?: number;
++  maxRows?: number;
++  margin?: number;
++  enableLightbox?: boolean;
++  onClickThumbnail?: () => void;
++  lightboxWillOpen?: () => void;
++  lightboxWillClose?: () => void;
++  tagStyle?: object;
++  tileViewportStyle?: () => void;
++  thumbnailStyle?: () => void;
++  thumbnailImageComponent?: React.Component;
++}
++
++interface LightBoxProps {
++  backdropClosesModal?: boolean;
++  currentImage?: number;
++  preloadNextImage?: boolean;
++  customControls?: Array;
++  enableKeyboardInput?: boolean;
++  imageCountSeparator?: string;
++  isOpen?: boolean;
++  showCloseButton?: boolean;
++  showImageCount?: boolean;
++  onClickImage?: () => void;
++  onClickPrev?: () => void;
++  onClickNext?: () => void;
++  currentImageWillChange?: () => void;
++  showLightboxThumbnails?: boolean;
++  onClickLightboxThumbnail?: () => void;
++  lightboxWidth?: number;
++  lightBoxProps?: object;
++}
++
++export default Gallery;
+\ No newline at end of file

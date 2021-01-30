@@ -19,8 +19,23 @@ import {
   IconButton,
 } from "@material-ui/core";
 
-const MainItem = ({ value, setValue }) => {
-  const onChange = (event) => {
+interface ValueProps {
+  value: string;
+  setValue: Function;
+}
+
+interface MainItemProps {
+  mainItem: number;
+}
+
+interface MainItemWithValueProps extends ValueProps, MainItemProps { }
+
+interface MainItemWithSetPriceProps extends MainItemProps {
+  setPrice: Function;
+}
+
+const MainItem = ({ value, setValue }: ValueProps) => {
+  const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setValue(event.target.value);
   };
   return (
@@ -34,11 +49,12 @@ const MainItem = ({ value, setValue }) => {
   );
 };
 
-export const RadioLabel = ({ text, style }) => (
+
+export const RadioLabel = ({ text, style }: { text: string, style?: React.CSSProperties }) => (
   <span style={{ color: "#000", ...style }}>{text}</span>
 );
-const ColoredType = ({ mainItem, value, setValue }) => {
-  const onChange = (event) => {
+const ColoredType = ({ mainItem, value, setValue }: MainItemWithValueProps) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
 
@@ -62,8 +78,8 @@ const ColoredType = ({ mainItem, value, setValue }) => {
   );
 };
 
-const CommissionType = ({ value, setValue }) => {
-  const onChange = (event) => {
+const CommissionType = ({ value, setValue }: ValueProps) => {
+  const onChange = (event: React.ChangeEvent<HTMLInputElement>) => {
     setValue(parseInt(event.target.value));
   };
 
@@ -85,8 +101,12 @@ const CommissionType = ({ value, setValue }) => {
   );
 };
 
-const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
-  const [state, setState] = useState({});
+interface StateProps {
+  [key: string]: string | null;
+}
+
+const AdditionalCheckboxField = ({ mainItem, setPrice }: MainItemWithSetPriceProps) => {
+  const [state, setState] = useState<StateProps>({});
   const [expanded, setExpanded] = useState(true);
   const additionalField = additionalFields[mainItem];
   const itemNumberPerRow = 6;
@@ -97,7 +117,7 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
       return;
     }
     const keys = additionalField.map((f) => f.key);
-    const newState = {};
+    const newState: StateProps = {};
     for (const key of keys) {
       newState[key] = null;
     }
@@ -118,8 +138,8 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
     setPrice({ min, max });
   };
 
-  const onChange = (value, event) => {
-    const newState = {
+  const onChange = (value: string, event: React.ChangeEvent<any>) => {
+    const newState: StateProps = {
       ...state,
       [event.target.name]: event.target.checked ? value : null,
     };
@@ -134,25 +154,25 @@ const AdditionalCheckboxField = ({ mainItem, setPrice }) => {
     recalculatePrice(newState);
   };
 
-  const handleExpandClick = ()=>{
+  const handleExpandClick = () => {
     setExpanded(!expanded)
   }
 
   useEffect(resetState, [mainItem]);
   if (!additionalField) return null;
   return (
-    <Card style={{width:'100%'}}>
+    <Card style={{ width: '100%' }}>
       <CardActions disableSpacing>
         <IconButton
-          style={{width: '100%', fontSize:14, height: 24}}
+          style={{ width: '100%', fontSize: 14, height: 24 }}
           onClick={handleExpandClick}
-        >{expanded? '收起': '更多選項'}</IconButton>
+        >{expanded ? '收起' : '更多選項'}</IconButton>
       </CardActions>
       <Collapse in={expanded} timeout="auto" unmountOnExit>
-        <div row={"true"}>
+        <div>
           {additionalField.map((f, index) => {
             const disabled =
-              f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
+              !!f.enabledOnlyIfKeySet && !state[f.enabledOnlyIfKeySet];
             const labelStyle = disabled ? { color: "#aaa" } : {};
             return (
               <React.Fragment key={f.label}>

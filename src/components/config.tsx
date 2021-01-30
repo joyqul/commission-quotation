@@ -1,15 +1,20 @@
-const coloredTypes = {
+interface OptionProps {
+  value: number,
+  label: string;
+}
+
+const coloredTypes: { [key: string]: OptionProps } = {
   monoColored: { value: 1, label: "黑白" },
   celluloidColored: { value: 2, label: "簡單上色" },
   meticulousColored: { value: 3, label: "精緻上色" },
 };
 
-const commissionTypes = {
+const commissionTypes: { [key: string]: OptionProps } = {
   gatcha: { value: 1, label: "轉蛋模式" },
   commission: { value: 2, label: "委託模式" },
 };
 
-const itemTypes = {
+const itemTypes: { [key: string]: OptionProps } = {
   chibiSingle: { value: 1, label: "Q版單人" },
   chibiCouple: { value: 2, label: "Q版雙人" },
   portrait: { value: 3, label: "頭貼" },
@@ -18,7 +23,15 @@ const itemTypes = {
   tachie: { value: 6, label: "全身立繪" },
 };
 
-const basePrices = {
+interface PriceProps {
+  [key: number]: number,
+}
+
+interface ColoredTypePriceProps {
+  [key: number]: PriceProps,
+}
+
+const basePrices: { [key: number]: ColoredTypePriceProps } = {
   [itemTypes.chibiSingle.value]: {
     [coloredTypes.celluloidColored.value]: {
       [commissionTypes.gatcha.value]: 250,
@@ -79,13 +92,32 @@ const basePrices = {
   },
 };
 
-const sampleImageTypes = {
+interface SampleImageTypeItemProps {
+  value: string,
+  label: string,
+}
+
+interface SampleImageTypeProps {
+  [key: string]: SampleImageTypeItemProps
+}
+
+const sampleImageTypes: SampleImageTypeProps = {
   original: { value: 'original', label: '原創' },
   derivativeWork: { value: 'derivativeWork', label: '二創' },
   dream: { value: 'dream', label: '夢向' },
 }
 
-const sampleImages = {
+interface SampleImageItemProps {
+  src: string,
+  caption: string,
+  type: string,
+}
+
+interface ColoredSampleImageItemProps {
+  [key: number]: SampleImageItemProps[]
+}
+
+const sampleImages: { [key: number]: ColoredSampleImageItemProps } = {
   [itemTypes.chibiSingle.value]: {
     [coloredTypes.celluloidColored.value]: [
       {
@@ -380,7 +412,17 @@ const sampleImages = {
   },
 };
 
-const chibiAdditionalFields = [{
+interface AdditionalFieldProps {
+  key: string,
+  value: string,
+  label: string,
+  price?: number,
+  minPrice?: number,
+  maxPrice?: number,
+  enabledOnlyIfKeySet?: string,
+}
+
+const chibiAdditionalFields: AdditionalFieldProps[] = [{
   key: "smallObject1",
   value: "smallObject1",
   label: '小物件',
@@ -394,7 +436,7 @@ const chibiAdditionalFields = [{
 }
 ]
 
-const additionalFields = {
+const additionalFields: { [key: number]: AdditionalFieldProps[] } = {
   [itemTypes.chibiSingle.value]: chibiAdditionalFields,
   [itemTypes.chibiCouple.value]: chibiAdditionalFields,
   [itemTypes.tachie.value]: [
