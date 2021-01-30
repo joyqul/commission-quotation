@@ -44,12 +44,12 @@ const basePrices: { [key: number]: ColoredTypePriceProps } = {
   },
   [itemTypes.chibiCouple.value]: {
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 500,
-      [commissionTypes.commission.value]: 550,
+      [commissionTypes.gatcha.value]: 450,
+      [commissionTypes.commission.value]: 500,
     },
     [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 600,
-      [commissionTypes.commission.value]: 650,
+      [commissionTypes.gatcha.value]: 550,
+      [commissionTypes.commission.value]: 600,
     },
   },
   [itemTypes.aboveWaistSingle.value]: {
