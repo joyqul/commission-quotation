@@ -18,6 +18,8 @@ import {
   CardActions,
   IconButton,
 } from "@material-ui/core";
+import app from 'firebase/app';
+import 'firebase/analytics';
 
 interface ValueProps {
   value: string;
