@@ -6,6 +6,7 @@ import {
   basePrices,
   commissionTypes,
   additionalFields,
+  itemTypes
 } from "./config";
 import {
   MenuItem,
@@ -39,6 +40,7 @@ interface MainItemWithSetPriceProps extends MainItemProps {
 const MainItem = ({ value, setValue }: ValueProps) => {
   const onChange = (event: React.ChangeEvent<{ value: unknown }>) => {
     setValue(event.target.value);
+    logClickEvent(event.target.value)
   };
   return (
     <Select value={value} onChange={onChange}>
@@ -49,6 +51,15 @@ const MainItem = ({ value, setValue }: ValueProps) => {
       ))}
     </Select>
   );
+
+  function logClickEvent(value: any): void {
+    for (const key of Object.keys(itemTypes)) {
+      if (itemTypes[key].value===value) {
+        app.analytics().logEvent(`click_item_${key}`)
+        break;
+      }
+    }
+  }
 };
 
 

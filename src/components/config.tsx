@@ -534,4 +534,5 @@ export {
   basePrices,
   commissionTypes,
   coloredTypes,
+  itemTypes,
 };
