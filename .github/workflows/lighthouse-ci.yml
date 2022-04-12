@@ -1,0 +1,38 @@
+name: Lighthouse CI
+on:
+  pull_request:
+    types: [opened, synchronize, reopened, closed]
+    branches:
+      - master
+jobs:
+  lighthouse-ci:
+    concurrency: ci-${{ github.ref }} # Recommended if you intend to make multiple deployments in quick succession.
+    runs-on: ubuntu-20.04
+    strategy:
+      matrix:
+        node-version: [16.x]
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: Install and build
+        run: |
+          sed -i'.original' -e 's/"homepage":.*/"homepage": ".",/g' package.json
+          npm ci
+          npm run build
+
+      - uses: actions/checkout@master
+
+      - name: Lighthouse
+        id: lighthouse_audit
+        uses: foo-software/lighthouse-check-action@master
+        with:
+          urls: 'https://www.foo.software,https://www.google.com'
+          device: 'all'
+          gitHubAccessToken: ${{ secrets.GITHUB_TOKEN }} 
