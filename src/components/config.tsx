@@ -34,22 +34,14 @@ interface ColoredTypePriceProps {
 const basePrices: { [key: number]: ColoredTypePriceProps } = {
   [itemTypes.chibiSingle.value]: {
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 250,
-      [commissionTypes.commission.value]: 300,
-    },
-    [coloredTypes.meticulousColored.value]: {
       [commissionTypes.gatcha.value]: 300,
-      [commissionTypes.commission.value]: 350,
+      [commissionTypes.commission.value]: 400,
     },
   },
   [itemTypes.chibiCouple.value]: {
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 450,
-      [commissionTypes.commission.value]: 500,
-    },
-    [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 550,
-      [commissionTypes.commission.value]: 600,
+      [commissionTypes.gatcha.value]: 700,
+      [commissionTypes.commission.value]: 800,
     },
   },
   [itemTypes.aboveWaistSingle.value]: {
@@ -58,12 +50,12 @@ const basePrices: { [key: number]: ColoredTypePriceProps } = {
       [commissionTypes.commission.value]: 400,
     },
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 350,
-      [commissionTypes.commission.value]: 450,
+      [commissionTypes.gatcha.value]: 400,
+      [commissionTypes.commission.value]: 500,
     },
     [coloredTypes.meticulousColored.value]: {
       [commissionTypes.gatcha.value]: 450,
-      [commissionTypes.commission.value]: 550,
+      [commissionTypes.commission.value]: 600,
     },
   },
   [itemTypes.aboveWaistCouple.value]: {
@@ -72,22 +64,22 @@ const basePrices: { [key: number]: ColoredTypePriceProps } = {
       [commissionTypes.commission.value]: 800,
     },
     [coloredTypes.celluloidColored.value]: {
-      [commissionTypes.gatcha.value]: 700,
-      [commissionTypes.commission.value]: 900,
-    },
-    [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 900,
-      [commissionTypes.commission.value]: 1100,
-    },
-  },
-  [itemTypes.tachie.value]: {
-    [coloredTypes.celluloidColored.value]: {
       [commissionTypes.gatcha.value]: 800,
       [commissionTypes.commission.value]: 1000,
     },
     [coloredTypes.meticulousColored.value]: {
-      [commissionTypes.gatcha.value]: 1000,
+      [commissionTypes.gatcha.value]: 900,
       [commissionTypes.commission.value]: 1200,
+    },
+  },
+  [itemTypes.tachie.value]: {
+    [coloredTypes.celluloidColored.value]: {
+      [commissionTypes.gatcha.value]: 900,
+      [commissionTypes.commission.value]: 1100,
+    },
+    [coloredTypes.meticulousColored.value]: {
+      [commissionTypes.gatcha.value]: 1200,
+      [commissionTypes.commission.value]: 1400,
     },
   },
 };
@@ -144,8 +136,6 @@ const sampleImages: { [key: number]: ColoredSampleImageItemProps } = {
         caption: "噗幣轉蛋圖 - 一人+小動物模板",
         type: sampleImageTypes.derivativeWork.value
       },
-    ],
-    [coloredTypes.meticulousColored.value]: [
       {
         src:
           "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0129-q-clam3963_orig.jpg",
@@ -174,8 +164,6 @@ const sampleImages: { [key: number]: ColoredSampleImageItemProps } = {
         caption: "委託圖",
         type: sampleImageTypes.dream.value,
       },
-    ],
-    [coloredTypes.meticulousColored.value]: [
       {
         src:
           "https://joyqul-commission.weebly.com/uploads/2/3/9/1/23912381/0314-q_orig.jpg",
